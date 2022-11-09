@@ -5,10 +5,10 @@ import "../styles/Section.css";
 function Section() {
   return (
     <div className="Container">
-      <h1 className="Title">
+      <h2 className="Title">
         VIAJA CON NOSOTROS Y DISFRUTA DE LOS MEJORES PAISAJES <br /> ¡AL MEJOR
         PRECIO!
-      </h1>
+      </h2>
       <div className="Container-card">
         <Card
           className="Card"
