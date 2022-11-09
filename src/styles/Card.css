@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+.Card-container {
+  height: 400px;
+  width: 305px;
+  border: 2px solid #aaa;
+  box-shadow: 0 0 10px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.Card-container:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.Card-img {
+  height: 250px;
+  width: 280px;
+  box-sizing: content-box;
+  border-radius: 15px;
+  padding: 10px;
+}
+.Pais {
+  display: flex;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}
+.Description {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  padding-left: 10px;
+}

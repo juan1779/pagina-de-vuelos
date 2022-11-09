@@ -1,0 +1,31 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  height: 89vh;
+  background: #403b4a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #e7e9bb,
+    #403b4a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #e7e9bb,
+    #403b4a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.Title {
+  display: flex;
+  margin: 20px 0;
+  justify-content: center;
+  align-items: center;
+  color: #0b1947;
+  text-align: center;
+}
+
+.Container-card {
+  display: flex;
+  margin: 0px 30px;
+  justify-content: space-evenly;
+  align-items: center;
+}
