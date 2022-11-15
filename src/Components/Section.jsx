@@ -1,6 +1,11 @@
 import React from "react";
 import Card from "./Card";
 import "../styles/Section.css";
+import { Data } from "../assets/DataCard";
+import {
+  FaRegArrowAltCircleLeft,
+  FaRegArrowAltCircleRight,
+} from "react-icons/fa";
 
 function Section() {
   return (
@@ -9,31 +14,39 @@ function Section() {
         VIAJA CON NOSOTROS Y DISFRUTA DE LOS MEJORES PAISAJES <br /> ¡AL MEJOR
         PRECIO!
       </h2>
-      <div className="Container-card">
-        <Card
-          className="Card"
-          Img="https://astelus.com/wp-content/viajes/Lago-Moraine-Parque-Nacional-Banff-Alberta-Canada.jpg"
-          Pais="CANADA"
-          Description="Nuestro destino de viaje nunca es un lugar sino una nueva forma de ver las cosas."
-        />
-        <Card
-          className="Card"
-          Img="https://images.ecestaticos.com/IQN3naQyb5JGKHB6BaQ5Z69omUs=/284x0:1987x1276/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F3ed%2Ff85%2Fb73%2F3edf85b732c5185f12b4811f2ca4eb12.jpg"
-          Pais="HOLANDA"
-          Description="Nuestro destino de viaje nunca es un lugar sino una nueva forma de ver las cosas."
-        />
-        <Card
-          className="Card"
-          Img="https://img.freepik.com/foto-gratis/torre-eiffel-paris-hermosos-colores-otono_268835-828.jpg?w=2000"
-          Pais="PARIS"
-          Description="Nuestro destino de viaje nunca es un lugar sino una nueva forma de ver las cosas."
-        />
-        <Card
-          className="Card"
-          Img="https://ep01.epimg.net/elviajero/imagenes/2018/05/25/album/1527248206_947021_1527250543_noticia_normal.jpg"
-          Pais="ESPAÑA"
-          Description="Nuestro destino de viaje nunca es un lugar sino una nueva forma de ver las cosas."
-        />
+      <div className="Container-btn">
+        <button className="Btn">
+          <FaRegArrowAltCircleLeft />
+        </button>
+        <div className="Container-card">
+          <Card
+            className="Card"
+            Img={Data[0].Img}
+            Pais={Data[0].Pais}
+            Description={Data[0].Description}
+          />
+          <Card
+            className="Card"
+            Img={Data[1].Img}
+            Pais={Data[1].Pais}
+            Description={Data[1].Description}
+          />
+          <Card
+            className="Card"
+            Img={Data[2].Img}
+            Pais={Data[2].Pais}
+            Description={Data[2].Description}
+          />
+          <Card
+            className="Card"
+            Img={Data[3].Img}
+            Pais={Data[3].Pais}
+            Description={Data[3].Description}
+          />
+        </div>
+        <button className="Btn">
+          <FaRegArrowAltCircleRight />
+        </button>
       </div>
     </div>
   );
