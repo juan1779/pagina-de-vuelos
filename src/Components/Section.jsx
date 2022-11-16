@@ -2,10 +2,7 @@ import React from "react";
 import Card from "./Card";
 import "../styles/Section.css";
 import { Data } from "../assets/DataCard";
-import {
-  FaRegArrowAltCircleLeft,
-  FaRegArrowAltCircleRight,
-} from "react-icons/fa";
+import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
 
 function Section() {
   return (
@@ -16,7 +13,7 @@ function Section() {
       </h2>
       <div className="Container-btn">
         <button className="Btn">
-          <FaRegArrowAltCircleLeft />
+          <FaChevronCircleLeft />
         </button>
         <div className="Container-card">
           <Card
@@ -45,7 +42,7 @@ function Section() {
           />
         </div>
         <button className="Btn">
-          <FaRegArrowAltCircleRight />
+          <FaChevronCircleRight />
         </button>
       </div>
     </div>
