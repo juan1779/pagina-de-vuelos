@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "./Card";
 import "../styles/Section.css";
 import { Data } from "../assets/DataCard";
 import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
 
 function Section() {
+  const cantidad = Data.length;
+
+  const [card, setCard] = useState(0);
+
+  const nextCard = () => {
+    setCard(card === cantidad - 1 ? 0 : card + 1);
+  };
+  const previusCard = () => {
+    setCard(card === 0 ? cantidad - 1 : card - 1);
+  };
   return (
     <div className="Container">
       <h2 className="Title">
@@ -12,36 +22,30 @@ function Section() {
         PRECIO!
       </h2>
       <div className="Container-btn">
-        <button className="Btn">
+        <button onClick={previusCard} className="Btn">
           <FaChevronCircleLeft />
         </button>
         <div className="Container-card">
-          <Card
-            className="Card"
-            Img={Data[0].Img}
-            Pais={Data[0].Pais}
-            Description={Data[0].Description}
-          />
-          <Card
-            className="Card"
-            Img={Data[1].Img}
-            Pais={Data[1].Pais}
-            Description={Data[1].Description}
-          />
-          <Card
-            className="Card"
-            Img={Data[2].Img}
-            Pais={Data[2].Pais}
-            Description={Data[2].Description}
-          />
-          <Card
-            className="Card"
-            Img={Data[3].Img}
-            Pais={Data[3].Pais}
-            Description={Data[3].Description}
-          />
+          {Data.map((Data, index) => {
+            return (
+              <div
+                key={index}
+                className={card === index ? "slider active" : "slider"}
+              >
+                {card === index && (
+                  <Card
+                    className="Card"
+                    key={index}
+                    Img={Data.Img}
+                    Pais={Data.Pais}
+                    Description={Data.Description}
+                  />
+                )}
+              </div>
+            );
+          })}
         </div>
-        <button className="Btn">
+        <button onClick={nextCard} className="Btn">
           <FaChevronCircleRight />
         </button>
       </div>
